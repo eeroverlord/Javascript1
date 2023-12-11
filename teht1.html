@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindromi-kone</title>
+  </head>
+  <body>
+    <script>
+      let sana_kysymys = prompt("Kirjoita sana:");
+      function palindromi(sana) {
+        let alku = 0;
+        let loppu = sana.length;
+        for (; alku < loppu; alku++, loppu--) {
+          if (sana[alku] !== sana[loppu]) {
+            return false;
+          }
+        }
+        return true;
+      }
+      let vastaus = palindromi(sana_kysymys);
+      console.log(vastaus);
+    </script>
+  </body>
+</html>
